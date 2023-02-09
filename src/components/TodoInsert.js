@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { MdAddCircle } from "react-icons/md";
+import { MdAdd } from "react-icons/md";
 import { TiTrash, TiPencil } from "react-icons/ti";
 import "./TodoInsert.css";
 
@@ -60,7 +60,7 @@ const TodoInsert = ({
           </div>
         ) : (
           <button type="submit">
-            <MdAddCircle />
+            <MdAdd />
           </button>
         )}
       </form>

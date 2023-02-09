@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import "./App.css";
 import Template from "./components/Template";
 import TodoList from "./components/TodoList";
-import { MdAddCircle } from "react-icons/md";
+import { MdCircle } from "react-icons/md";
 import TodoInsert from "./components/TodoInsert";
 
 
 
-let nextId = 0;
+
 
 const App = () => {
   const [selectedTodo, setSelectedTodo] = useState(null);
@@ -51,12 +51,12 @@ const App = () => {
       
     } else {
       const todo = {
-        id: nextId,
+ 
         text,
         checked: false
       };
       setTodos(todos => todos.concat(todo));
-      nextId++;
+
     }
   };
 
@@ -92,8 +92,8 @@ const App = () => {
         onInsertToggle={onInsertToggle}
         onChangeSelectedTodo={onChangeSelectedTodo}
       />
-      <div className="add-todo-button" onClick={onInsertToggle}>
-        <MdAddCircle />
+      <div className="add-button" onClick={onInsertToggle}>
+        <mdCircle />
       </div>
       {insertToggle && (
         <TodoInsert
